@@ -32,12 +32,12 @@ module.exports = function toReadable (s) {
             if ((x-i)%3==0) {str += 'hundred ';}
             sk=1;
         }
-       /* if ((x-i)%3==1) {
+        if ((x-i)%3==1) {
             //if((i==x-1)){str += th[(x-i-1)/3];}
              if (sk)
                 {str += th[(x-i-1)/3]+' ';}
             sk=0;
-        }*/
+        }
     }
 
     if (x != s.length) {
