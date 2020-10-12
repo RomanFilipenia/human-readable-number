@@ -33,8 +33,8 @@ module.exports = function toReadable (s) {
             sk=1;
         }
         if ((x-i)%3==1) {
-            //if((i==x-1)){str += th[(x-i-1)/3];}
-             if (sk)
+            if((i==x-1)){str += th[(x-i-1)/3];}
+             else if (sk)
                 {str += th[(x-i-1)/3]+' ';}
             sk=0;
         }
