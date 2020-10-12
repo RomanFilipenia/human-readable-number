@@ -20,29 +20,20 @@ module.exports = function toReadable (s) {
                 str += tn[Number(n[i+1])] + ' ';
                 i++;
                 sk=1;
-                console.log(str);
             } else if (n[i]!=0) {
                 str += tw[n[i]-2] + ' ';
                 sk=1;
-                console.log(str);
             }
         } else if (n[i]!=0) { // 0235
-            if(i==x-1){str += dg[n[i]];
-               console.log(str);}
-            
-            if(i!==x-1){str += dg[n[i]] +' ';
-            console.log(str);}
-            
-            if ((x-i)%3==0) {str += 'hundred ';
-            console.log(str);}
+            if(i==x-1){str += dg[n[i]];}
+            if(i!==x-1){str += dg[n[i]] +' ';}
+            if ((x-i)%3==0) {str += 'hundred ';}
             sk=1;
         }
         if ((x-i)%3==1) {
-            if((i==x-1)){str += th[(x-i-1)/3];
-                console.log(str);}
+            if((i==x-1)){str += th[(x-i-1)/3];}
             else if (sk)
-                {str += th[(x-i-1)/3]+' ';
-                console.log(str);}
+                {str += th[(x-i-1)/3]+' ';}
             sk=0;
         }
     }
