@@ -44,5 +44,5 @@ module.exports = function toReadable (s) {
         for (var i=x+1; i<y; i++)
             str += dg[n[i]] +' ';
     }
-    return str.replace(/\s+/g,' ');
+    return str;//.replace(/\s+/g,' ');
 }
