@@ -21,17 +21,17 @@ module.exports = function toReadable (s) {
                 i++;
                 sk=1;
             } else if (n[i]!=0) {
-                str += tw[n[i]-2];
+                str += tw[n[i]-2]+' ';
                 sk=1;
             }
         } else if (n[i]!=0) { // 0235
-            str += dg[n[i]];
+            str += dg[n[i]]+' ';
             if ((x-i)%3==0) str += 'hundred ';
             sk=1;
         }
         if ((x-i)%3==1) {
             if (sk)
-                str += th[(x-i-1)/3];
+                str += th[(x-i-1)/3]+' ';
             sk=0;
         }
     }
@@ -40,7 +40,7 @@ module.exports = function toReadable (s) {
         var y = s.length;
         str += 'point ';
         for (var i=x+1; i<y; i++)
-            str += dg[n[i]];
+            str += dg[n[i]]+' ';
     }
     return str.replace(/\s+/g,' ');
 }
