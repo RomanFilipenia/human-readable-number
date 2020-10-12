@@ -26,7 +26,7 @@ module.exports = function toReadable (s) {
             }
         } else if (n[i]!=0) { // 0235
             if(i==x-1){str += dg[n[i]];}
-            str += dg[n[i]]+' ';
+             else {str += dg[n[i]]+' ';}
             if ((x-i)%3==0) str += 'hundred ';
             sk=1;
         }
