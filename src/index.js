@@ -40,7 +40,7 @@ module.exports = function toReadable (s) {
         var y = s.length;
         str += 'point ';
         for (var i=x+1; i<y; i++)
-            str += dg[n[i]] +' ';
+            str += dg[n[i]] +'  ';
     }
     return str.replace(/\s+/g,' ');
 }
