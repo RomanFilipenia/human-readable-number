@@ -24,7 +24,7 @@ module.exports = function toReadable (s) {
                 str += tw[n[i]-2] + ' ';
                 sk=1;
             }
-        } else if (n[i]!=0) { // 0235
+        } else if (n[i]!=0) {
             if(i==x-1){str += dg[n[i]];}
             if(i!==x-1){str += dg[n[i]] +' ';}
             if ((x-i)%3==0) str += 'hundred ';
@@ -43,5 +43,6 @@ module.exports = function toReadable (s) {
         for (var i=x+1; i<y; i++)
             str += dg[n[i]] +' ';
     }*/
+    console.log(str.replace(/\s+/g,' '));
     return str.replace(/\s+/g,' ');
 }
