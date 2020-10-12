@@ -17,11 +17,11 @@ module.exports = function toReadable (s) {
     for (var i=0;   i < x;  i++) {
         if ((x-i)%3==2) { 
             if (n[i] == '1') {
-                str += tn[Number(n[i+1])]+' ';
+                str += tn[Number(n[i+1])] + ' ';
                 i++;
                 sk=1;
             } else if (n[i]!=0) {
-                str += tw[n[i]-2]+' ';
+                str += tw[n[i]-2] + ' ';
                 sk=1;
             }
         } else if (n[i]!=0) { // 0235
@@ -32,7 +32,7 @@ module.exports = function toReadable (s) {
         }
         if ((x-i)%3==1) {
             if (sk)
-                str += th[(x-i-1)/3];
+                str += th[(x-i-1)/3] + ' ';
             sk=0;
         }
     }
@@ -41,7 +41,7 @@ module.exports = function toReadable (s) {
         var y = s.length;
         str += 'point ';
         for (var i=x+1; i<y; i++)
-            str += dg[n[i]]+' ';
+            str += dg[n[i]] +' ';
     }
     return str.replace(/\s+/g,' ');
 }
