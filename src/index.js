@@ -25,7 +25,7 @@ module.exports = function toReadable (s) {
                 sk=1;
             }
         } else if (n[i]!=0) { // 0235
-            if(i==x-1){str += dg[n[i]];}
+            if(i==x-1){str += dg[n[i]]+' ';}
              str += dg[n[i]]+' ';
             if ((x-i)%3==0) str += 'hundred ';
             sk=1;
