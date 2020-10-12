@@ -17,7 +17,7 @@ module.exports = function toReadable (s) {
     for (var i=0;   i < x;  i++) {
         if ((x-i)%3==2) { 
             if (n[i] == '1') {
-                str += tn[Number(n[i+1])] + ' ';
+                str += tn[Number(n[i+1])];
                 i++;
                 sk=1;
             } else if (n[i]!=0) {
@@ -42,5 +42,5 @@ module.exports = function toReadable (s) {
         for (var i=x+1; i<y; i++)
             str += dg[n[i]] +' ';
     }
-    return str.replace(' ',/\s+/g);
+    return str.replace(/\s+/g,' ');
 }
