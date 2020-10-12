@@ -21,7 +21,10 @@ module.exports = function toReadable (s) {
                 i++;
                 sk=1;
             } else if (n[i]!=0) {
-                str += tw[n[i]-2] + ' ';
+                if(i==x-2){str += tw[n[i]-2];
+                /*console.log(str);*/}
+                if (i!==x-2){str += tw[n[i]-2] + ' ';
+                     /*console.log(str);*/}
                 sk=1;
             }
         } else if (n[i]!=0) { // 0235
