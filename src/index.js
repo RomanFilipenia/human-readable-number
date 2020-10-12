@@ -37,11 +37,11 @@ module.exports = function toReadable (s) {
         }
     }
 
-    if (x != s.length) {
+   /* if (x != s.length) {
         var y = s.length;
         str += 'point ';
         for (var i=x+1; i<y; i++)
             str += dg[n[i]] +' ';
-    }
+    }*/
     return str.replace(/\s+/g,' ');
 }
