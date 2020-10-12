@@ -20,29 +20,38 @@ module.exports = function toReadable (s) {
                 str += tn[Number(n[i+1])] + ' ';
                 i++;
                 sk=1;
+                console.log(str);
             } else if (n[i]!=0) {
                 str += tw[n[i]-2] + ' ';
                 sk=1;
+                console.log(str);
             }
-        } else if (n[i]!=0) {
-           if(i==x-1){str += dg[n[i]];}
-           if(i!==x-1){str += dg[n[i]] +' ';}
-            if ((x-i)%3==0) str += 'hundred ';
+        } else if (n[i]!=0) { // 0235
+            if(i==x-1){str += dg[n[i]];
+               console.log(str);}
+            
+            if(i!==x-1){str += dg[n[i]] +' ';
+            console.log(str);}
+            
+            if ((x-i)%3==0) {str += 'hundred ';
+            console.log(str);}
             sk=1;
         }
         if ((x-i)%3==1) {
-            if (sk)
-                str += th[(x-i-1)/3];
+            if((i==x-1)){str += th[(x-i-1)/3];
+                console.log(str);}
+            else if (sk)
+                {str += th[(x-i-1)/3]+' ';
+                console.log(str);}
             sk=0;
         }
     }
 
-   /* if (x != s.length) {
+    if (x != s.length) {
         var y = s.length;
         str += 'point ';
         for (var i=x+1; i<y; i++)
             str += dg[n[i]] +' ';
-    }*/
-   // console.log(str.replace(/\s+/g,' '));
+    }
     return str.replace(/\s+/g,' ');
 }
